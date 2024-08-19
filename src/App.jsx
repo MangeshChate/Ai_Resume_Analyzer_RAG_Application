@@ -137,7 +137,7 @@ const RoboResumeAnalyzer = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4">
+    <div className="min-h-screen bg-gray-100 p-4 grid-bg">
     <div className="max-w-6xl mx-auto">
       <h1 className="text-4xl sm:text-5xl font-bold text-center mb-8 text-indigo-800">
         AI Resume Analyzer

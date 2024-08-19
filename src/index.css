@@ -97,8 +97,3 @@
   box-shadow: 0 0 10px #4ade80, 0 0 20px #4ade80, 0 0 30px #4ade80, 0 0 40px #4ade80;
 }
 
-.grid-bg {
-  background: radial-gradient(circle, #000000 10%, transparent 11%) 0% 0% / 3em 3em, radial-gradient(circle at bottom left, #000000 5%, transparent 6%) 0% 0% / 3em 3em, radial-gradient(circle at bottom right, #000000 5%, transparent 6%) 0% 0% / 3em 3em, radial-gradient(circle at top left, #000000 5%, transparent 6%) 0% 0% / 3em 3em, radial-gradient(circle at top right, #000000 5%, transparent 6%) 0% 0% / 3em 3em #F9F9FF;
-  opacity: 0.5;
-  background-size: 19px 19px;
-}
