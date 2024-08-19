@@ -11,6 +11,13 @@
   color: #333;
 
 }
+.bg-grid{
+  
+  background-image: radial-gradient(#474bff 2px, transparent 2px), radial-gradient(#474bff 2px, transparent 2px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+  background-color: #ffffff;
+}
 
 .file-input {
   display: block;
