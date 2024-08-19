@@ -1,5 +1,5 @@
 
-# Resume Analysis Application
+# Resume Analysis Application (RAG)
 
 **Resume Analysis Application** is a web-based tool designed to analyze and evaluate resumes by extracting content from PDF files and generating insights such as scores, suggestions, and good points using an advanced AI model.
 
