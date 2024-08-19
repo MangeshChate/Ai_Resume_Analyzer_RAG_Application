@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const HeroSection = () => (
-  <section className="bg-indigo-600 py-20">
+  <section className="bg-indigo-500 text-light  py-20">
     <div className="max-w-6xl mx-auto text-center">
       <motion.h2
         initial={{ opacity: 0, y: -50 }}
