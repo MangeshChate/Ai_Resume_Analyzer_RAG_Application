@@ -5,11 +5,10 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { CloudArrowUpIcon, DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline';
 
-// Initialize the Inference object with your Hugging Face API key
-const inference = new HfInference('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');
 
-// Define constants
-const MODEL = "microsoft/Phi-3-mini-4k-instruct";
+const inference = new HfInference(import.meta.env.VITE_API_KEY);
+
+const MODEL = import.meta.env.VITE_MODEL;
 
 const RoboResumeAnalyzer = () => {
   const [pdfText, setPdfText] = useState('');
@@ -21,7 +20,7 @@ const RoboResumeAnalyzer = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    // Set up PDF.js worker
+   
     const setupWorker = async () => {
       const pdfjsWorker = await import('pdfjs-dist/build/pdf.worker.mjs');
       pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
@@ -29,7 +28,7 @@ const RoboResumeAnalyzer = () => {
     setupWorker();
   }, []);
 
-  // Extract text from PDF using pdf.js
+  
   const extractTextFromPDF = async (file) => {
     try {
       const arrayBuffer = await file.arrayBuffer();
@@ -49,19 +48,19 @@ const RoboResumeAnalyzer = () => {
     }
   };
 
-  // Handle file upload
+  
   const handleFileChange = async (e) => {
     const file = e.target.files[0];
     if (file) {
       const text = await extractTextFromPDF(file);
       if (text) {
         setPdfText(text);
-        setError(''); // Clear any previous errors
+        setError(''); 
       }
     }
   };
 
-  // Generate response using Hugging Face API
+
   const generateResponse = async (context) => {
     const messages = [
       { 
@@ -100,7 +99,7 @@ const RoboResumeAnalyzer = () => {
     }
   };
 
-  // Handle query submission
+ 
   const handleSubmit = async () => {
     if (pdfText.trim() === '') {
       setError('Please provide a PDF file');
@@ -109,11 +108,11 @@ const RoboResumeAnalyzer = () => {
 
     setIsLoading(true);
     try {
-      // Generate response based on the extracted PDF text
+    
       const generatedText = await generateResponse(pdfText);
       setResponse(generatedText);
 
-      // Extract specific parts from the generated text
+     
       const scoreMatch = generatedText.match(/Score:\s*(\d+)/i);
       const suggestionsMatch = generatedText.match(/Suggestions:\s*([\s\S]*?)(?=Good Points:|$)/i);
       const goodPointsMatch = generatedText.match(/Good Points:\s*([\s\S]*?)(?=$)/i);
@@ -129,7 +128,7 @@ const RoboResumeAnalyzer = () => {
     }
   };
 
-  // Function to format text with bullet points
+
   const formatList = (text) => {
     return text.split('\n').map((item, index) => (
       item.trim() ? <li key={index} className="ml-4 mb-2">{item}</li> : null
