@@ -24,7 +24,7 @@ The Resume Analysis Application leverages the power of AI to provide detailed in
 ## Features
 
 - **PDF Content Extraction:** Automatically extract all text content from uploaded PDF resumes.
-- **AI-Powered Analysis:** Use the `microsoft/Phi-3-mini-4k-instruct` model to analyze the extracted content and generate:
+- **AI-Powered Analysis:** Use the `microsoft/Phi-3-mini-4k-instruct` model and the Google Gemini API to analyze the extracted content and generate:
   - Resume score
   - Key strengths (good points)
   - Areas for improvement (suggestions)
@@ -40,7 +40,7 @@ The Resume Analysis Application leverages the power of AI to provide detailed in
   - Heroicons v2
 - **Backend:**
   - Vercel (for hosting)
-  - Hugging Face's `microsoft/Phi-3-mini-4k-instruct` model for AI processing
+  - Hugging Face's `microsoft/Phi-3-mini-4k-instruct` model and Google Gemini API for AI processing
 
 ## Getting Started
 
@@ -93,11 +93,29 @@ yarn dev
 
 This will start the development server, and you can view the application at `http://localhost:3000`.
 
+### Environment Variables
+
+Ensure the following environment variables are set:
+
+```bash
+VITE_API_KEY=your-google-gemini-api-key
+VITE_GOOGLE_API_URL=https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent
+```
+
 ## Usage
 
 1. **Upload Resume:** Use the upload feature to select a PDF resume from your device.
 2. **Analyze Content:** The application will automatically extract text content from the PDF.
 3. **View Insights:** The extracted content is sent to the AI model, which generates and displays a score, key strengths, and suggestions based on the content.
 
+## Contributing
 
+Contributions are welcome! Please feel free to submit a pull request.
 
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For any questions or issues, please reach out to [mbchate08@gmail.com](mailto:mbchate08@gmail.com).
