@@ -118,7 +118,7 @@ const RoboResumeAnalyzer = () => {
       const responseText = result.data.candidates[0].content.parts[0].text;
       return responseText.trim();
     } catch (error) {
-      setError(`Error generating response from Gemini API: ${error.message}`);
+      setError(`Error generating response from  Server: ${error.message}`);
       console.error('Error generating response:', error);
       return 'Error generating response.';
     }
