@@ -69,7 +69,7 @@ const RoboResumeAnalyzer = () => {
         {
           parts: [
             {
-              text: `Evaluate the following resume and provide a detailed assessment. Respond in the exact format below without markup:
+              text: `Evaluate the following resume and provide a detailed assessment. Respond in the exact format below without markup and title and any "*":
 
               Score: [numerical score out of 100]
 
