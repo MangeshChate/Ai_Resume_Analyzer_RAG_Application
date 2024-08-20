@@ -11,10 +11,7 @@ const apiKey = import.meta.env.VITE_API_KEY;
 
 const apiUrl = import.meta.env.VITE_GOOGLE_API_URL;
 
-if (!apiUrl) {
-    console.error('API URL is undefined');
-}
-
+console.log('API URL:', apiUrl);
 
 const RoboResumeAnalyzer = () => {
   const [pdfText, setPdfText] = useState('');
