@@ -7,8 +7,8 @@ import { FiUpload, FiFileText, FiCheckCircle } from 'react-icons/fi';
 import { FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
 import { MdOutlineCheckCircle, MdOutlineError } from 'react-icons/md';
 
+const apiKey = import.meta.env.VITE_API_KEY;
 
-const apiKey = import.meta.env.VITE_MODEL;
 const apiUrl = import.meta.env.VITE_GOOGLE_API_URL;
 
 const RoboResumeAnalyzer = () => {
