@@ -2,27 +2,18 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const HeroSection = () => (
-  <section className="bg-indigo-500 text-light  py-20">
-    <div className="max-w-6xl mx-auto text-center">
+  <section className="bg-indigo-500 text-white py-16 px-6 sm:px-8 lg:px-12 mb-3 shadow-2xl">
+    <div className="max-w-4xl mx-auto text-center">
       <motion.h2
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl font-extrabold mb-4 "
+        className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight"
       >
         Effortlessly Analyze Your Resume
       </motion.h2>
-      <motion.p
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="mb-8 text-sm"
-      >
-        Upload your resume and get instant, personalized feedback on your strengths and areas for improvement.
-      </motion.p>
-     
-    </div>
+     </div>
   </section>
 );
 
-export default HeroSection
+export default HeroSection;
