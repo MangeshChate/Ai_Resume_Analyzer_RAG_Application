@@ -156,8 +156,8 @@ const RoboResumeAnalyzer = () => {
     
     <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg mb-6 md:mb-8 flex flex-col items-center">
   <div className="flex flex-col md:flex-row items-center justify-between w-full mb-6">
-    <h2 className="text-2xl md:text-3xl font-bold text-indigo-800 flex items-center mb-4 md:mb-0">
-      <FiFileText className="h-6 md:h-8 w-6 md:w-8 mr-2 md:mr-3 text-indigo-600" />
+    <h2 className="text-2xl md:text-3xl font-bold text-blue-800 flex items-center mb-4 md:mb-0">
+      <FiFileText className="h-6 md:h-8 w-6 md:w-8 mr-2 md:mr-3 text-blue-600" />
       Upload Your Resume
     </h2>
     
@@ -176,7 +176,7 @@ const RoboResumeAnalyzer = () => {
     <input id="dropzone-file" type="file" className="hidden" accept=".pdf" onChange={handleFileChange} />
   </label>
   <button
-      className={`bg-indigo-600 hover:bg-indigo-700 text-white py-2 mt-3 w-full  px-4 md:py-3 md:px-6 rounded-md transition-transform transform hover:scale-105 flex items-center justify-center ${
+      className={`bg-blue-600 hover:bg-blue-700 text-white py-2 mt-3 w-full  px-4 md:py-3 md:px-6 rounded-md transition-transform transform hover:scale-105 flex items-center justify-center ${
         pdfText.trim() === '' || isLoading ? 'cursor-not-allowed opacity-70' : ''
       }`}
       disabled={pdfText.trim() === '' || isLoading}
@@ -212,8 +212,8 @@ const RoboResumeAnalyzer = () => {
   
     {response && (
       <div className="bg-white p-5  rounded-lg shadow-lg">
-        <h2 className="text-3xl  font-bold mb-6 text-indigo-800 flex items-center">
-          <FiCheckCircle className="h-8 w-8 mr-3 text-indigo-600" />
+        <h2 className="text-3xl  font-bold mb-6 text-blue-800 flex items-center">
+          <FiCheckCircle className="h-8 w-8 mr-3 text-blue-600" />
           Analysis Results
         </h2>
 
@@ -259,7 +259,7 @@ const RoboResumeAnalyzer = () => {
         <div className="space-y-8">
           {suggestions.length > 0 && (
             <div className="bg-gray-100 p-6 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-indigo-700 flex items-center">
+              <h3 className="text-2xl font-semibold mb-4 text-blue-700 flex items-center">
                 <FaCheckCircle className="text-green-500 mr-3" />
                 Suggestions
               </h3>
@@ -273,7 +273,7 @@ const RoboResumeAnalyzer = () => {
 
           {goodPoints.length > 0 && (
             <div className="bg-gray-100 p-6 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-indigo-700 flex items-center">
+              <h3 className="text-2xl font-semibold mb-4 text-blue-700 flex items-center">
                 <FaCheckCircle className="text-blue-500 mr-3" />
                 Good Points
               </h3>
@@ -287,7 +287,7 @@ const RoboResumeAnalyzer = () => {
 
           {strengths.length > 0 && (
             <div className="bg-gray-100 p-6 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-indigo-700 flex items-center">
+              <h3 className="text-2xl font-semibold mb-4 text-blue-700 flex items-center">
                 <FaCheckCircle className="text-purple-500 mr-3" />
                 Strengths
               </h3>
@@ -301,7 +301,7 @@ const RoboResumeAnalyzer = () => {
 
           {weaknesses.length > 0 && (
             <div className="bg-gray-100 p-6 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-indigo-700 flex items-center">
+              <h3 className="text-2xl font-semibold mb-4 text-blue-700 flex items-center">
                 <FaCheckCircle className="text-red-500 mr-3" />
                 Weaknesses
               </h3>
