@@ -7,7 +7,7 @@ import { FiUpload, FiFileText, FiCheckCircle } from 'react-icons/fi';
 import { FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
 import { MdOutlineCheckCircle, MdOutlineError } from 'react-icons/md';
 
-// Google API key and URL
+
 const apiKey = import.meta.env.VITE_MODEL;
 const apiUrl = import.meta.env.VITE_GOOGLE_API_URL;
 
@@ -153,7 +153,7 @@ const RoboResumeAnalyzer = () => {
   return (
   <div className="bg-grid flex flex-col items-center  ">
   <div className="max-w-screen-xl w-full mx-auto p-4">
-    {/* Upload Section */}
+    
     <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg mb-6 md:mb-8 flex flex-col items-center">
   <div className="flex flex-col md:flex-row items-center justify-between w-full mb-6">
     <h2 className="text-2xl md:text-3xl font-bold text-indigo-800 flex items-center mb-4 md:mb-0">
@@ -209,7 +209,7 @@ const RoboResumeAnalyzer = () => {
     </button>
 </div>
 
-    {/* Analysis Results Section */}
+  
     {response && (
       <div className="bg-white p-5  rounded-lg shadow-lg">
         <h2 className="text-3xl  font-bold mb-6 text-indigo-800 flex items-center">
@@ -243,7 +243,7 @@ const RoboResumeAnalyzer = () => {
                   value={chancesOfHiring}
                   text={`${chancesOfHiring}%`}
                   styles={buildStyles({
-                    pathColor: '#34d399', // Green color for chances of hiring
+                    pathColor: '#34d399',
                     textColor: '#34d399',
                     trailColor: '#e5e7eb',
                   })}
@@ -255,7 +255,7 @@ const RoboResumeAnalyzer = () => {
           )}
         </div>
 
-        {/* Suggestions, Good Points, Strengths, Weaknesses */}
+     
         <div className="space-y-8">
           {suggestions.length > 0 && (
             <div className="bg-gray-100 p-6 rounded-lg">
@@ -316,7 +316,7 @@ const RoboResumeAnalyzer = () => {
       </div>
     )}
 
-    {/* Error Message */}
+    
     {error && (
       <div className="mt-4 text-red-600 font-semibold text-center">
         {error}
